@@ -7,10 +7,9 @@ import org.junit.jupiter.api.Test;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 
-public class GettingStarted {
+public class GettingStartedTest {
 
     @Test
     public void imperativeApproach() throws IOException {
@@ -39,7 +38,7 @@ public class GettingStarted {
         List<Person> youngPeople = people.stream()
                 .filter(p -> p.getAge() <= 18)
                 .limit(10)
-                .collect(Collectors.toList());
+                .toList();
         youngPeople.forEach(System.out::println);
     }
 }
